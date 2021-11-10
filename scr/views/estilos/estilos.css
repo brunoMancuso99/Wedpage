@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0; /* margen interno */
+    background: url(LKPR_RWY31.jpg);   
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    
+}
+
+#menu ul {
+
+    text-decoration: none;
+    padding: 5px;
+    
+
+}
+
+#menu #item {
+
+    float: left;  /* pongo el menu en horizontal */
+
+}
+
+#menu #item  a {
+
+    
+    color: white;
+    padding: 12px 22px; 
+    display: block; /* le doy forma de caja */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+
+
+}
+
+#menu #vuelo {
+ 
+    display: none;
+    position: absolute;
+    min-width: 20px;
+}
+
+#menu #item:hover #vuelo {
+
+    display: block;
+}
+
+#menu #item:hover #promo #precios {
+
+    display: block;
+}
+
+#menu #item a:hover  {
+
+    background-color: yellow;
+}
+
+#menu #item:hover #promo #precios #bariloche {
+
+    background: url(bariloche.jpg);
+}
+
+#menu #item:hover #promo #precios #buenosarires {
+
+    background: url(JQNDKHIRSFEDZM5FREIFQJLGDA.jpg);
+}
+
+#menu #item:hover #promo #precios #buenosarires {
+
+    background: url(descarga.jpg);
+}

@@ -1,0 +1,105 @@
+<% include partials/_header %>
+
+<div class="container">
+
+    <div class="row mt-5">
+
+    <div class="col-md-7"> 
+
+        <table>
+            <thead>
+            
+                <tr> NroAsiento </tr>
+                <tr> nombre </tr>
+                <tr> apellido </tr>
+                <tr> DNI </tr> 
+                <tr> idvuelo </tr>
+                <tr> action </tr>
+
+            </thead>
+
+            <tbody>
+
+                <% if (data) { %>
+                    <% for(var i=0; i < data.lenght; i++) { %>
+
+                        <tr>
+
+                        <td> <%= (i+1)  %> </td>
+                        <td> <%= data[i].nombre %> </td>
+                        <td> <%= data[i].apellido  %> </td>
+                        <td> <%= data[i].DNI  %> </td>
+                        <td> <%= data[i].idvuelo  %> </td>
+
+                        <td>
+                            <a href="/deletep/<%= data[i].id %>" class= "btn btn-danger" >borrar  </a>
+                            
+                        </td>
+
+                        </tr>
+
+            <% }%>
+                        <% }%>
+            </tbody>
+
+        </table>
+
+     </div>
+
+     <div class="col-md-5">
+
+
+     </div>
+
+     <form action="/scr/routes/vuelos.js/addp"  action="/scr/routes/vuelos.js/updatep" method="post">
+
+        <div class="form-group">
+       
+           <input type="text" name="nombre" placeholder="origen" class="form-control">
+
+        </div>
+
+        <div class="form-group">
+       
+            <input type="text" name="apellido" placeholder="destino" class="form-control">
+ 
+         </div>
+
+         <div class="form-group">
+       
+            <input type="number" name="DNI" placeholder="hsalida" class="form-control">
+ 
+         </div>
+
+         <div class="form-group">
+       
+            <input type="number" name="idvuelo" placeholder="idvuelo" class="form-control">
+ 
+         </div>
+
+         <button type="submit" class="btn btn-primary" action ="/scr/routes/vuelos.js/addp">
+             Reservar vuelo
+         </button>
+
+         <button type="submit" class="btn btn-info" action ="/scr/routes/vuelos.js/updatep" >
+            Actualizar
+        </button>
+       
+       </form>
+
+    </div>
+
+</div>
+
+    <li> <a href="/scr/views/consultas/select.ejs"> para realizar demas consultas </a></li>
+
+    <li> <a href="/scr/views/consultas/select1.ejs"> para realizar demas consultas </a></li>
+
+    <li> <a href="/scr/views/consultas/select2.ejs"> para realizar demas consultas </a></li>
+
+    <li> <a href="/scr/views/consultas/select3.ejs"> para realizar demas consultas </a></li>
+
+    <li> <a href="/scr/views/consultas/select4.ejs"> para realizar demas consultas </a></li>
+
+
+<% include partials/_body %>

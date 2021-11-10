@@ -1,0 +1,43 @@
+<% include partials/_header %>
+
+
+<table>
+    <thead>
+    
+        <tr>idnroVuelo </tr>
+        <tr> origen </tr>
+        <tr> destino </tr>
+        <tr> hsalida </tr> 
+        <tr> hllegada </tr>
+        <tr> idvuelo </tr>
+        <tr> action </tr>
+
+    </thead>
+
+    <tbody>
+
+        <% if (data) { %>
+            <% for(var i=0; i < data.lenght; i++) { %>
+                <tr>
+
+                <td> <%= (i+1)  %> </td>
+                <td> <%= data[i].origen %> </td>
+                <td> <%= data[i].destino  %> </td>
+                <td> <%= data[i].hsalida  %> </td>
+                <td> <%= data[i].hllegada %> </td>
+                <td> <%= data[i].idvuelo  %> </td>
+
+                <td>
+                    <a href="scr/routes/vuelos.js/select3" class= "btn btn-danger">  </a>
+                    
+                </td>
+
+                </tr>
+
+    <% }%>
+                <% }%>
+    </tbody>
+
+</table>
+
+<% include partials/_body %>
